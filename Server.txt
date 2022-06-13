@@ -1,0 +1,28 @@
+apt-get update;apt-get install -y locales;locale-gen "ru_RU.UTF-8";sudo apt-get -y install language-pack-ru;sudo update-locale LANG=ru_RU.UTF-8;sudo apt-get update;sudo apt-get install -y htop;\
+sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4;wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb;sudo apt --fix-broken install;sudo apt-get -y install default-jdk;\
+sudo apt -y install chromium-browser;\
+wget https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip -O /usr/local/bin/chromedriver_linux64.zip;wget https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip -O /usr/bin/chromedriver_linux64.zip;\
+sudo apt-get -y install unrar;sudo apt-get -y install unzip;unzip /usr/local/bin/chromedriver_linux64.zip -d /usr/local/bin/;unzip /usr/bin/chromedriver_linux64.zip -d /usr/bin/;sudo apt update;\
+sudo chmod +x /usr/local/bin/chromedriver;\
+sudo apt -y install software-properties-common;sudo add-apt-repository ppa:deadsnakes/ppa -y;sudo apt update;sudo apt -y install python3.9;\
+sudo apt -y install python3-pip;sudo apt update;apt -y install python3.9-distutils;sudo apt update;sudo apt -y install curl;\
+sudo apt -y install python3.9-dev;python3.9 -m pip install --upgrade setuptools;python3.9 -m pip install --upgrade pip;python3.9 -m pip install --upgrade distlib;\
+curl https://bootstrap.pypa.io/get-pip.py | sudo -H python3.9;\
+python3.9 -m pip install selenium;\
+python3.9 -m pip install requests;\
+python3.9 -m pip install beautifulsoup4;\
+python3.9 -m pip install pycryptodome;\
+python3.9 -m pip install pycryptodomex;\
+python3.9 -m pip install selenium-wire;\
+python3.9 -m pip install loguru;\
+python3.9 -m pip install pandas;\
+python3.9 -m pip install numpy;\
+python3.9 -m pip install gspread;\
+python3.9 -m pip install oauth2client;\
+python3.9 -m pip install mail-parser;\
+python3.9 -m pip install pydantic;\
+sudo apt-get install run-one;\
+python3.9 -m pip install python-dateutil;\
+python3.9 -m pip install undetected-chromedriver;\
+crontab -l 2>/dev/null| cat - <(echo "0 6 * * * sudo shutdown -r") | crontab -;\
+crontab -l 2>/dev/null| cat - <(echo "*/5 * * * * chmod +x /root/Insurance_RCA/run.py; cd /root/Insurance_RCA/ && run-one nohup python3.9 -u ./run.py > output.log &") | crontab -
